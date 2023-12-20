@@ -292,7 +292,7 @@ class Model():
             
         if self.experiment == '4DSTEM':
             self.scan_pixels = 2**(self.experiment_gui.scanpixelsslider.value())
-            self.scanpixelsize = self.sample.width/self.scan_pixels
+            self.scan_pixel_size = self.sample.width/self.scan_pixels
             self.cameralength = self.sample.z
             self.set_experiment_labels()
 
@@ -373,7 +373,7 @@ class Model():
         self.experiment_gui.semiconvlabel.setText(
             str('Semiconv = ' + str(round(self.semiconv, 4))))
         self.experiment_gui.scanpixelsizelabel.setText(
-            str('Scan pixel size = ' + str(round(self.scanpixelsize, 4))))
+            str('Scan pixel size = ' + str(round(self.scan_pixel_size, 4))))
         self.experiment_gui.cameralengthlabel.setText(
             str('Camera length = ' + str(round(self.cameralength, 4))))
 
